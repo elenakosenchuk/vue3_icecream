@@ -33,7 +33,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  base:'/vue_cli_icecream/',
+  base:'/vue3_icecream/',
   history: createWebHashHistory(),
   routes
 })
