@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "name":"Brown bread",
+        "content":"Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.",        
+        "discount":19.55,
+        "price":22.55,
+        "img":"prod-icecream.png"
+    },
+    {
+        "id":2,
+        "name":"Sweet corn",
+        "content":"Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.",        
+        "discount":19.55,
+        "price":22.55,
+        "img":"prod-yellow.png"
+    },
+    {
+        "id":3,
+        "name":"Cayenne chocolate",
+        "content":"Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.",        
+        "discount":19.55,
+        "price":22.55,
+        "img":"prod-chocolate.png"
+    },
+    {
+        "id":4,
+        "name":"Candy cane",
+        "content":"Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.",        
+        "discount":19.55,
+        "price":22.55,
+        "img":"prod-different.png"
+    },
+    {
+        "id":5,
+        "name":"Tasty plate",
+        "content":"Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.",        
+        "discount":19.55,
+        "price":22.55,
+        "img":"pink-icecream2.png"
+    },
+    {
+        "id":6,
+        "name":"Tasty dessert",
+        "content":"Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.Bon Au Pain is a pioneer in the healthy fast food scene.",        
+        "discount":19.55,
+        "price":22.55,
+        "img":"header-icecream-2.png"
+    }                        
+]
