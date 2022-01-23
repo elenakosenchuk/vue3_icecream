@@ -115,6 +115,13 @@
         top: 0;
 
     }
+
+    #testimonials .container .testimonials_content .testimonials_slider_wrapper #testimonials_slider .testimonials_item {
+        flex-direction: column-reverse;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -142,6 +149,11 @@
 
     #products .container .products_content .tabs {
         margin: 0 auto 50px;
+    }
+
+    #testimonials .container .testimonials_title {
+        font-size: 36px;
+        line-height: 42px;
     }
 }
 
@@ -186,6 +198,10 @@
 
     #app_block .container .app_block_wrapper .app_block_content .apps_logo a {
         width: 150px;
+    }
+
+    #testimonials .container .testimonials_title {
+        width: 90%;
     }
 }
 

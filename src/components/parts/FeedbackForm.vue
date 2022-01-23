@@ -136,4 +136,15 @@ export default {
     resize: none;
     height: 100px;
 }
+@media screen and (max-width: 850px){
+    .feedback_form{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 770px){
+    .feed_back_title{
+        width: 80%;
+        text-align: center;
+    }
+}
 </style>

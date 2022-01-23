@@ -22,6 +22,15 @@
     #footer .footer_container .footer_navigation_block {
         width: 15%;
     }
+
+    #products .container .products_content .tabs .tabs_list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tabs_list_name {
+        padding: 10px 20px;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -69,6 +78,10 @@
         font-size: 32px;
         line-height: 40px;
     }
+
+    #products .container .products_content .tab_content_wrapper .tab_content .tab_text_item {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -102,6 +115,13 @@
         top: 0;
 
     }
+
+    #testimonials .container .testimonials_content .testimonials_slider_wrapper #testimonials_slider .testimonials_item {
+        flex-direction: column-reverse;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -115,6 +135,25 @@
 
     #main_page {
         padding: 200px 0 50px;
+    }
+
+    #products .container .products_content .tab_content_wrapper .tab_content {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #products .container .products_content .tab_content_wrapper .tab_content .tab_text_item {
+        width: 90%;
+    }
+
+    #products .container .products_content .tabs {
+        margin: 0 auto 50px;
+    }
+
+    #testimonials .container .testimonials_title {
+        font-size: 36px;
+        line-height: 42px;
     }
 }
 
@@ -141,6 +180,11 @@
         width: 50%;
         padding: 0;
     }
+
+    #products .container .products_content .products_title {
+        font-size: 32px;
+        line-height: 36px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -154,6 +198,10 @@
 
     #app_block .container .app_block_wrapper .app_block_content .apps_logo a {
         width: 150px;
+    }
+
+    #testimonials .container .testimonials_title {
+        width: 90%;
     }
 }
 

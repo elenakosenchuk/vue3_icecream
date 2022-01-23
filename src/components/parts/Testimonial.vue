@@ -3,25 +3,29 @@
     <div class="testimonials_slider_wrapper">
         <ul id="testimonials_slider">
             <li class="testimonials_item">
-                <h5 class="author_name">{{testimonial.name}}</h5>
-                <p class="testimonial_text">
-                    <svg>
-                        <use xlink:href="assets/images/icons/sprite.svg#left_quoutes"></use>
-                    </svg>
-                    {{testimonial.content}}
-                    <svg>
-                        <use xlink:href="assets/images/icons/sprite.svg#right_quoutes"></use>
-                    </svg>
-                </p>
-                <div class="btn_wrapper">
-                    <button @click.prevent="openModal" class="btn buy_btn" type="button">Add testimonial</button>
+                <div class="testimonial_content">
+                    <h5 class="author_name">{{testimonial.name}}</h5>
+                    <p class="testimonial_text">
+                        <svg>
+                            <use xlink:href="assets/images/icons/sprite.svg#left_quoutes"></use>
+                        </svg>
+                        {{testimonial.content}}
+                        <svg>
+                            <use xlink:href="assets/images/icons/sprite.svg#right_quoutes"></use>
+                        </svg>
+                    </p>
+                    <div class="btn_wrapper">
+                        <button @click.prevent="openModal" class="btn buy_btn" type="button">Add testimonial</button>
+                    </div>
+                </div>
+                
+                <div class="testimonials_picture">
+                    <img :src="`assets/images/${testimonial.img}`" alt="Ice-cream picture">
                 </div>
             </li>
         </ul>
     </div>
-    <div class="testimonials_picture">
-        <img :src="`assets/images/${testimonial.img}`" alt="Ice-cream picture">
-    </div>
+    
                
 </template>
 
@@ -91,6 +95,41 @@ export default {
 .swal2-styled.swal2-cancel{
     background: #686161;
     width: 100px;
-    height: 50px;
+    height: 50px;    
 }
+.testimonials_picture{
+    width: 40%;
+    img{
+        object-fit: contain;
+    }    
+}
+.testimonial_content{
+    width: 50%;
+}
+@media screen and (max-width: 960px){
+    .carousel__prev{
+        left: 30%;
+    }
+    .carousel__next{
+        right: 30%;
+    }
+}
+@media screen and (max-width: 850px){
+    .testimonial_content {
+        width: 90%;
+    }
+
+    .testimonials_picture {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 590px){
+    .carousel__prev{
+        left: 20%;
+    }
+    .carousel__next{
+        right: 20%;
+    }
+}
+
 </style>
