@@ -137,8 +137,4 @@ export default {
     height: 3px;
     background-color: #fff;
 }
-
-// .bm-item-list li a:hover{
-//     color: black;
-// }
 </style>
