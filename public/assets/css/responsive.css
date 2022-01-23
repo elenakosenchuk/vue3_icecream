@@ -155,6 +155,11 @@
         font-size: 36px;
         line-height: 42px;
     }
+
+    .artical_container h1 {
+        font-size: 36px;
+        line-height: 42px;
+    }
 }
 
 @media screen and (max-width: 590px) {

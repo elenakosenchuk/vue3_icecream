@@ -55,9 +55,25 @@ export default {
                 display: inline-block;
                 text-align: center;
                 padding-top: 13px;
+                }
             }
-        }
-        }
-        
+        }        
     }
+    .article_picture{
+        width: 35%;
+    }
+    @media screen and (max-width: 850px){
+       .article_content{
+           flex-direction: column;
+           gap: 20px;
+           align-items: center;
+       } 
+       .article_picture{
+        width: 100%;
+        }
+        .article_content .article_text_item{
+            width: 80%;
+        }
+    }   
+    
 </style>
