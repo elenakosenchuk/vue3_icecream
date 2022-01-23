@@ -104,4 +104,14 @@ export default {
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 590px){
+  .modal-container {
+    width: 90%;
+    height: 450px;
+  }
+  .modal-container .modal-header{
+    font-size: 22px;
+  }
+}
+
 </style>

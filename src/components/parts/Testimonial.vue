@@ -122,6 +122,9 @@ export default {
     .testimonials_picture {
         width: 70%;
     }
+    .swal2-checkbox, .swal2-file, .swal2-input, .swal2-radio, .swal2-select, .swal2-textarea{
+        margin: 1em 0 3px;
+    }
 }
 @media screen and (max-width: 590px){
     .carousel__prev{
