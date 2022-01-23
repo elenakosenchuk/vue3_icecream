@@ -804,18 +804,11 @@ img {
   text-align: center;
 }
 
-#testimonials .container .testimonials_content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#testimonials .container .testimonials_content .testimonials_slider_wrapper {
-  width: 60%;
-}
-
 #testimonials .container .testimonials_content .testimonials_slider_wrapper #testimonials_slider .testimonials_item {
   font-family: "Roboto";
+  display: flex;
+  justify-content: space-between;
+
 }
 
 #testimonials .container .testimonials_content .testimonials_slider_wrapper #testimonials_slider .testimonials_item .author_name {
@@ -830,7 +823,7 @@ img {
   font-size: 1rem;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.7);
-  width: 90%;
+  /* width: 90%; */
   margin-bottom: 50px;
 }
 
