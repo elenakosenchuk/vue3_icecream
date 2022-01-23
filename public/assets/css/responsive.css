@@ -22,6 +22,15 @@
     #footer .footer_container .footer_navigation_block {
         width: 15%;
     }
+
+    #products .container .products_content .tabs .tabs_list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tabs_list_name {
+        padding: 10px 20px;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -68,6 +77,10 @@
     #app_block .container .app_block_wrapper .app_block_content .app_block_title {
         font-size: 32px;
         line-height: 40px;
+    }
+
+    #products .container .products_content .tab_content_wrapper .tab_content .tab_text_item {
+        width: 70%;
     }
 }
 
