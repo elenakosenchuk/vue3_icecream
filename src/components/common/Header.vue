@@ -1,6 +1,6 @@
 <template>
 
-<div id="mobile_menu_wrap">
+<!-- <div id="mobile_menu_wrap">
         <div class="sidemenu_top">
             <div class="mobile_logo">
                 <router-link to="/" class="logo"><img src="assets/images/logo.png" alt="Site Logo"></router-link>
@@ -21,8 +21,9 @@
             </ul>
         </nav>
     </div>
-    <div id="page_overlay"></div>
+    <div id="page_overlay"></div> -->
 
+    
     <header id="header_menu" :class="isFixed?'fixed':''">
             <div class="container header-container">
                 <div id="header_logo">
@@ -41,15 +42,24 @@
                     <div class="btn_wrapper">
                         <button @click.prevent="callbackFormDisplay()" class="btn callback_btn" type="submit">Call Back</button>
                     </div>
+                    <Slide :closeOnNavigation="true">
+                        <li><router-link to="/">Home</router-link></li>
+                            <li><router-link to="/products">Product</router-link></li>
+                            <li><router-link to="/articles">Articles</router-link></li>
+                            <li><router-link to="/testimonials">Testimonials</router-link></li>
+                            <li><router-link to="/contacts">Contact Us</router-link></li>
+                    </Slide>
                 </div>
+                
+                <!-- :burgerIcon="documentElement.clientWidth<960?true:false" -->
 
-                <div id="hamburger_menu">
+                <!-- <div id="hamburger_menu">
                     <button class="hamburger hamburger--slider" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
                     </button>
-                </div>
+                </div> -->
             </div>
 
             <transition name="modal">
@@ -71,18 +81,20 @@
 <script>
 import Modal from '../common/Modal.vue'
 import CallbackForm from '../common/CallbackForm.vue'
+import { Slide } from 'vue3-burger-menu'
+
 export default {
     name:'Header',
     components:{
         Modal,
-        CallbackForm
+        CallbackForm,
+        Slide
     },
     data(){
         return{
             showModal:false,
             isFixed: false,            
-            modalTitle: '',
-            
+            modalTitle: '',                        
         }        
     },
     methods:{
@@ -98,6 +110,7 @@ export default {
         window.document.onscroll = ()=>{
             this.isFixed = window.scrollY>100?true:false;
         }
+        
     }
 }
 </script>

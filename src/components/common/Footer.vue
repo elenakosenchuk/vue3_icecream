@@ -3,7 +3,7 @@
             <div class="container footer_container">
 
                 <div class="footer_logo_block">
-                    <div id="footer_logo"><a href="#main_page"><img src="assets/images/logo.png" alt="Site Logo"></a>
+                    <div id="footer_logo"><router-link to="/"><img src="assets/images/logo.png" alt="Site Logo"></router-link>
                     </div>
                     <div class="footer_description">
                         <p>Some food has looked so awful that it's looked like something that the dog's brought home.
@@ -31,11 +31,11 @@
                 <div class="footer_navigation_block">
                     <nav id="footer_navigation">
                         <ul>
-                            <li><a href="#main_page">Home</a></li>
-                            <li><a href="#product">Product</a></li>
-                            <li><a href="#articles">Articles</a></li>
-                            <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
+                            <li><router-link to="/">Home</router-link></li>
+                            <li><router-link to="/products">Product</router-link></li>
+                            <li><router-link to="/articles">Articles</router-link></li>
+                            <li><router-link to="/testimonials">Testimonials</router-link></li>
+                            <li><router-link to="/contacts">Contact Us</router-link></li> 
                         </ul>
                     </nav>
                 </div>

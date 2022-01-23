@@ -17,6 +17,7 @@
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vue-sweetalert2": "^5.0.2",
+    "vue3-burger-menu": "^1.1.1",
     "vue3-carousel": "^0.1.35",
     "vue3-lazyload": "^0.2.5-beta"
   },
