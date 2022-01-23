@@ -1,29 +1,13 @@
 <template>
-
-<!-- <div id="mobile_menu_wrap">
-        <div class="sidemenu_top">
-            <div class="mobile_logo">
-                <router-link to="/" class="logo"><img src="assets/images/logo.png" alt="Site Logo"></router-link>
-            </div>
-            <button @click="toggle = !toggle" class="hamburger hamburger--slider" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
-        <nav class="sidemenu">
-            <ul>
-                <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/products">Product</router-link></li>
-                <li><router-link to="/articles">Articles</router-link></li>
-                <li><router-link to="/testimonials">Testimonials</router-link></li>
-                <li><router-link to="/contacts">Contact Us</router-link></li>   
-            </ul>
-        </nav>
-    </div>
-    <div id="page_overlay"></div> -->
-
     
+    <Slide :closeOnNavigation="true" :isOpen="isOpen" @closeMenu="isOpen = false" :burgerIcon="false">
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/products">Product</router-link></li>
+        <li><router-link to="/articles">Articles</router-link></li>
+        <li><router-link to="/testimonials">Testimonials</router-link></li>
+        <li><router-link to="/contacts">Contact Us</router-link></li>
+    </Slide>
+
     <header id="header_menu" :class="isFixed?'fixed':''">
             <div class="container header-container">
                 <div id="header_logo">
@@ -41,38 +25,30 @@
                     </nav>
                     <div class="btn_wrapper">
                         <button @click.prevent="callbackFormDisplay()" class="btn callback_btn" type="submit">Call Back</button>
-                    </div>
-                    <Slide :closeOnNavigation="true">
-                        <li><router-link to="/">Home</router-link></li>
-                            <li><router-link to="/products">Product</router-link></li>
-                            <li><router-link to="/articles">Articles</router-link></li>
-                            <li><router-link to="/testimonials">Testimonials</router-link></li>
-                            <li><router-link to="/contacts">Contact Us</router-link></li>
-                    </Slide>
-                </div>
-                
-                <!-- :burgerIcon="documentElement.clientWidth<960?true:false" -->
+                    </div>                    
+                </div>               
 
-                <!-- <div id="hamburger_menu">
-                    <button class="hamburger hamburger--slider" type="button">
+                <div id="hamburger_menu">
+                    <button v-if="!isOpen" @click="isOpen=true" class="hamburger hamburger--slider" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
                     </button>
-                </div> -->
-            </div>
+                </div>
+            </div>            
 
             <transition name="modal">
-                <modal v-if="showModal" @close="showModal = false">
-                
-                <template v-slot:header>                    
-                    <button @click="showModal = false" class="close_btn">&#10006;</button> 
-                    <h3>{{modalTitle}}</h3>                   
-                </template>
-                <template #body>
-                    <CallbackForm :hideme="hideModal" />
-                </template>
-                <template #footer>&nbsp;</template>
+                <modal v-if="showModal" @close="showModal = false">                
+                    <template v-slot:header>                    
+                        <button @click="showModal = false" class="close_btn">&#10006;</button> 
+                        <h3>{{modalTitle}}</h3>                   
+                    </template>
+
+                    <template #body>
+                        <CallbackForm :hideme="hideModal" />
+                    </template>
+
+                    <template #footer>&nbsp;</template>
                 </modal>
             </transition>
         </header>
@@ -94,7 +70,8 @@ export default {
         return{
             showModal:false,
             isFixed: false,            
-            modalTitle: '',                        
+            modalTitle: '',
+            isOpen: false                        
         }        
     },
     methods:{
@@ -115,7 +92,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .close_btn{
     width: 50px;
     height: 50px;
@@ -133,5 +110,35 @@ export default {
     top: 10px;
     right: 10px;
 }
+.bm-menu {
+  z-index: 1015;
+  color: #fff;
+  background-color: #D23166;
+}
+.bm-item-list li a {
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.5s ease;     
+}
+.bm-item-list li a:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.bm-item-list li a:hover:before{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
 
+// .bm-item-list li a:hover{
+//     color: black;
+// }
 </style>
