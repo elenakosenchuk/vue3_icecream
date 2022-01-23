@@ -1,6 +1,9 @@
 <template>
     
     <Slide :closeOnNavigation="true" :isOpen="isOpen" @closeMenu="isOpen = false" :burgerIcon="false">
+        <div id="header_logo">
+                <router-link to="/" class="logo"><img src="assets/images/logo.png" alt="Site Logo"></router-link>
+            </div>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/products">Product</router-link></li>
         <li><router-link to="/articles">Articles</router-link></li>
@@ -110,10 +113,10 @@ export default {
     top: 10px;
     right: 10px;
 }
-.bm-menu {
-  z-index: 1015;
-  color: #fff;
-  background-color: #D23166;
+#app .bm-menu {
+    z-index: 1015;
+    color: #fff;
+    padding-top: 0;
 }
 .bm-item-list li a {
     color: #fff;
@@ -137,4 +140,5 @@ export default {
     height: 3px;
     background-color: #fff;
 }
+
 </style>
